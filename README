@@ -1,0 +1,4 @@
+Watches a redis pubsub channel and broadcasts to websockets.
+
+by Michael Nutt
+michael@nuttnet.net
