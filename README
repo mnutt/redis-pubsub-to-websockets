@@ -1,4 +1,31 @@
-Watches a redis pubsub channel and broadcasts to websockets.
+redis-pubsub-to-websockets
+--------------------------
+
+Watches a redis pubsub channel and broadcasts to websockets. (Socket.IO)
 
 by Michael Nutt
 michael@nuttnet.net
+
+
+Requirements
+============
+
+ * node.js >= 0.2.4
+ * npm
+
+
+Installation
+============
+
+ * npm bundle
+ * node app.js [redis_key]
+
+Notes
+=====
+
+To set up the Socket.IO client to connect to node, follow the guide here: http://socket.io.
+
+License
+=======
+
+MIT License. Copyright 2010 Michael Nutt.  See LICENSE.
