@@ -1,0 +1,29 @@
+<html>
+
+  <head>
+    <script src="js/jquery-1.4.2.js"></script>
+    <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        socket = new io.Socket('localhost', {port: 8080});
+        socket.on('message', function(data){
+          var div = $("<div></div>");
+          div.text(data);
+
+          $("#messages").append(div);
+        });
+
+        socket.connect();
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <h1>Messages</h1>
+
+    <div id="messages"></div>
+  </body>
+
+</html>
