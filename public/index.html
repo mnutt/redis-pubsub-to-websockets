@@ -11,7 +11,7 @@
           var div = $("<div></div>");
           div.text(data);
 
-          $("#messages").append(div);
+          $("#messages").prepend(div);
         });
 
         socket.connect();
