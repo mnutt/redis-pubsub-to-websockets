@@ -1,5 +1,11 @@
 require.paths.unshift(__dirname + "/node_modules");
 
+var channel = process.argv[2];
+if(!channel) {
+  console.log("Usage: node app.js [redis channel]");
+  process.exit(1);
+}
+
 var redis = require("redis"),
   http = require("http"),
   io = require("socket.io"),
@@ -18,11 +24,11 @@ socket.on("connection", function(client) {
 });
 
 // Watch redis
-console.log("Watching channel: " + process.argv[2]);
+console.log("Watching channel: " + channel);
 
 client.on("message", function(channel, message) {
   console.log(message.toString());
   socket.broadcast(message.toString());
 });
 
-client.subscribe(process.argv[2]);
+client.subscribe(channel);
