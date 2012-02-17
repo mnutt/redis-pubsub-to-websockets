@@ -10,7 +10,7 @@ michael@nuttnet.net
 Requirements
 ============
 
- * node.js >= 0.2.4
+ * node.js >= 0.4.0
  * npm
 
 
