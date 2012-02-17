@@ -3,8 +3,8 @@
   "description"  : "Watch a redis pubsub channel and broadcast it to websocket clients",
   "version"      : "0.0.1",
   "dependencies" : {
-    "redis"     : "0.5.9",
-    "socket.io" : "0.6.16"
+    "redis"     : "0.7.1",
+    "socket.io" : "0.8.7"
   },
   "repository"   : { 
     "type" : "git",

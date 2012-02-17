@@ -6,15 +6,14 @@
 
     <script>
       $(document).ready(function() {
-        socket = new io.Socket('localhost', {port: 8080});
-        socket.on('message', function(data){
+        socket = io.connect("http://localhost:8080");
+        socket.on('message', function(data) {
+          console.log(data);
           var div = $("<div></div>");
           div.text(data);
 
           $("#messages").prepend(div);
         });
-
-        socket.connect();
       });
     </script>
   </head>
